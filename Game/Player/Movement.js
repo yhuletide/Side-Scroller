@@ -1,6 +1,6 @@
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
-
+console.log(c.width);
 class player {
   constructor(hitPoints, currentWeapon, xLocation, yLocation){
     this._hitPoints = hitpoints; // hitpoints for player
@@ -13,24 +13,26 @@ var xLocation = 100;
 var yLocation = 290;
 
  function move(e){ // makes object (player) move on screen with W A S D keys
-
-  if (e.keyCode == 87) {
+  if (e.keyCode == 87 && yLocation >= 225) {//up (w)
     yLocation -=2.75;
   }
-else if (e.keyCode == 83) {
-  console.log("s");
+else if (e.keyCode == 83 && yLocation <= c.height -10) {//down (s)
+
     yLocation +=2.75;
   }
-else if (e.keyCode == 65) {
+else if (e.keyCode == 65 && xLocation >= 0) {//left(a)
     xLocation -=2.75;
   }
-else if (e.keyCode == 68){
+else if (e.keyCode == 68 && xLocation <= c.width -10){//right(d)
     xLocation +=2.75;
   }
   ctx.clearRect(0,0, c.width, c.height);
   ctx.beginPath();
   ctx.rect(xLocation, yLocation, 10, 10);
   ctx.stroke();
+
 }
+
+
 
 document.onkeydown = move;
