@@ -5,14 +5,10 @@ var ctx = c.getContext("2d");
 c.addEventListener('keydown',fred._move)
 function draw(){
 
-ctx.clearRect(0,0, c.width, c.height);
-ctx.beginPath();
-ctx.rect(this._xLocation, this._yLocation, 10, 10);
-ctx.stroke();
-
-}
-
 ctx.beginPath();
 ctx.rect(100, 270, 25, 25);
 ctx.fill();
 ctx.stroke();
+
+
+}

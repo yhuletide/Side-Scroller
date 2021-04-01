@@ -7,12 +7,7 @@ class Player {
     this._xLocation = xLocation; // x location of player
     this._ylocation = yLocation; // y location of player
   }
-  _draw(){
-    ctx.beginPath();
-    ctx.rect(20, 20, 70, 70);
-    ctx.fill();
-    ctx.stroke();
-  }
+  
 
  _move(e){ // makes object (player) move on screen with W A S D keys
   if (e.keyCode == 87 && this._yLocation >= 225) {//up (w)
