@@ -11,3 +11,8 @@ ctx.rect(this._xLocation, this._yLocation, 10, 10);
 ctx.stroke();
 
 }
+
+ctx.beginPath();
+ctx.rect(100, 270, 25, 25);
+ctx.fill();
+ctx.stroke();
