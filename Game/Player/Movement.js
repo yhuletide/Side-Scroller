@@ -36,12 +36,12 @@ else if (e.keyCode == 68 && this._xLocation <= c.width -10){//right(d)
     this.speedY = 0;
     this.x = x;
     this.y = y;
-    this.update = function() {
+    this.update = function(knight) {
       ctx = myGameArea.context;
       ctx.fillStyle = color;
       ctx.fillRect(this.x, this.y, this.width, this.height);
     }
-    this.newPos = function() {
+    this.newPos = function(knight) {
       this.x += this.speedX;
       this.y += this.speedY;
     }
