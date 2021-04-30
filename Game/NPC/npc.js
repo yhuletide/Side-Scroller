@@ -1,5 +1,5 @@
 class Npc {
-  constructor(hitPoints, damageOut, locX, locY, playerLocX, playerLocY){
+  constructor(hitPoints, damageOut, locX, locY,){
     this._hitPoints = hitPoints;//The current health of an NPC
     this._damageOut = damageOut;//the amount of damage an NPC will do
     this._locX = locX;//Xcoord
@@ -11,7 +11,5 @@ class Npc {
     else if (direction == "left"){this._locY = this._locX -1}//will make the NPC go left
     else if(direction == "right"){this._locY = this.locX +1}//Will make the npc go right
     else {console.log("Wrong input! Exspected left right up or down and got " + direction + "!");}//this
-
-
-  }
+}
 }
